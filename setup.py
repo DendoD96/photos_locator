@@ -14,6 +14,24 @@ setup(
 	author='Daniele Rossi',
 	author_email='daniele.rossi27@unibo.it',
 	url='https://github.com/DendoD96/photos_locator',
+	keywords=['photography', 'gps-location'],
 	license=license_file,
-	packages=find_packages(exclude='tests')
+	packages=find_packages(exclude='tests'),
+	install_requires=[
+		'Pillow',
+		'geopy',
+		'Unidecode'
+	],
+	classifiers=[
+		'Development Status :: 3 - Alpha',
+		'Environment :: Console',
+		'Intended Audience :: Hobbyist photographer',
+		'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+		'Topic :: Utilities',
+		'Programming Language :: Python :: 3',
+		'Programming Language :: Python :: 3.6',
+		'Programming Language :: Python :: 3.7',
+		'Programming Language :: Python :: 3.8',
+		'Programming Language :: Python :: 3.9',
+	]
 )
