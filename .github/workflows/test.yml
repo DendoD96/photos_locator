@@ -21,9 +21,11 @@ jobs:
           pip install -r requirements.txt
           pip install -r test-requirements.txt
       - name: Run tests
-        run: nosetests --with-coverage --cover-package=sample
+        run: |
+          nosetests --with-coverage --cover-package=sample
+          coverage xml
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v2
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          files: ./coverage
+          files: ./coverage.xml
