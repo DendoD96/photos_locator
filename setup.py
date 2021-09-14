@@ -4,7 +4,7 @@ with open('README.md') as file:
 	readme_file = file.read()
 
 setup(
-	name='photos-locator',
+	name='photoslocator',
 	version='0.1.0',
 	description='A simple tool to rename your photos using gps metadata',
 	long_description=readme_file,
@@ -14,7 +14,7 @@ setup(
 	url='https://github.com/DendoD96/photos_locator',
 	keywords=['photography', 'gps-location'],
 	license='GPLv3',
-	scripts=["sample/photos_locator"],
+	scripts=["sample/photoslocator"],
 	install_requires=[
 		'Pillow',
 		'geopy',

@@ -15,7 +15,7 @@
 Run:
 
 ```bash
-$ pip install photos-locator-too-common-name
+$ pip install photoslocator
 ```
 
 to install application with pip. If you want to install photos_locator from sources, after you have downloaded it,
@@ -28,5 +28,5 @@ $ pip3 install -r requirements.txt
 ## Usage
 
 ```bash
-$ photos-locator <path_to_photos_directory>
+$ photoslocator <path_to_photos_directory>
 ```
