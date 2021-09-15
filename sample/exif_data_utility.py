@@ -12,7 +12,7 @@ DATETIME_DECIMAL_TIFF_TAG = 306
 
 GPS_DECIMAL_IFD_TAG = 34853
 
-NOMINATIM_GEO_LOCATOR = Nominatim(user_agent='photos_locator')
+NOMINATIM_GEO_LOCATOR = Nominatim(user_agent='photoslocator')
 
 
 def _none_not_allowed(original_function):
