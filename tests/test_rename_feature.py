@@ -7,11 +7,12 @@ from sample.exif_data_utility import get_location_and_datetime
 class RenameFeatureTest(unittest.TestCase):
 
     def test_gps_poi_and_datetime_data(self):
-        expected_result = {'location': 'Chalet Tovel', 'datetime': '2021-09-05T16-09-10'}
+        possible_results = [{'location': 'Chalet Tovel', 'datetime': '2021-09-05T16-09-10'},
+                            {'location': 'VilledAnaunia ComunitadellaValdiNon', 'datetime': '2021-09-05T16-09-10'}]
         photo_absolute_path = os.path.join(os.path.dirname(__file__), 'images/exif_gps_poi.jpg')
         location_datetime = get_location_and_datetime(photo_absolute_path=photo_absolute_path)
-        self.assertEqual(location_datetime, expected_result,
-                         f"location and datetime of {photo_absolute_path} does not match with {expected_result}")
+        self.assertIn(location_datetime, possible_results,
+                      f"location and datetime of {photo_absolute_path} doesn't match with possibles {possible_results}")
 
     def test_gps_without_poi_and_datetime_data(self):
         expected_result = {'location': 'Fazzon Pellizzano', 'datetime': '2021-09-04T11-06-10'}
